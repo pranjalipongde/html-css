@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Itim&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="menu">
+        <h2>Documentation Menu</h2>
+        <ul>
+          <li><a href="#inheritance">Inheritance</a></li>
+          <li><a href="#polymorphism">Polymorphism</a></li>
+          <li><a href="#encapsulation">Encapsulation</a></li>
+          <li><a href="#abstraction">Abstraction</a></li>
+          <li><a href="#closures">Closures</a></li>
+          <li><a href="#async-js">Asynchronous JavaScript</a></li>
+          <li><a href="#prototypes">Prototypes</a></li>
+          <li><a href="#modules">Modules</a></li>
+        </ul>
+      </div>
+
+      <div class="content">
+        <h1>OOPs and Key Concepts in JavaScript</h1>
+        <section id="inheritance">
+          <h2>Inheritance</h2>
+          <p>
+            Inheritance allows one class to inherit the properties and methods
+            of another class, making code reuse possible. In JavaScript,
+            inheritance is implemented using prototypes. Each object has a
+            prototype object, which may have its own prototype, forming a chain.
+            Through this chain, JavaScript provides a way to access properties
+            or methods from higher up in the chain if they are not found on the
+            current object.
+          </p>
+          <p>
+            JavaScript’s prototype-based inheritance is dynamic and flexible,
+            allowing objects to be modified at runtime. This type of inheritance
+            differs from classical inheritance as seen in languages like Java or
+            C++, where class hierarchies are established at compile-time. With
+            prototype inheritance, changes to one object can affect all other
+            objects that share the same prototype, which is both powerful and,
+            if not managed carefully, prone to errors.
+          </p>
+        </section>
+
+        <section id="polymorphism">
+          <h2>Polymorphism</h2>
+          <p>
+            Polymorphism allows objects to take on multiple forms. This means
+            the same function or method can operate differently based on the
+            context. In JavaScript, polymorphism is typically achieved through
+            method overriding or method overloading. JavaScript’s dynamic typing
+            and flexible function signatures make it easier to use polymorphism
+            as compared to statically typed languages.
+          </p>
+          <p>
+            One real-world example of polymorphism is the behavior of the
+            `toString()` method, which can be overridden in various objects. For
+            instance, when `toString()` is called on an array, it returns a
+            comma-separated list of elements, whereas when called on a Date
+            object, it returns a human-readable date string.
+          </p>
+        </section>
+
+        <section id="encapsulation">
+          <h2>Encapsulation</h2>
+          <p>
+            Encapsulation involves bundling data and functions together within a
+            single object, restricting access to some of the object's
+            components. In JavaScript, encapsulation can be achieved using
+            closures, where functions have access to private data defined within
+            their lexical scope. This is a common way to manage the state and
+            behavior of objects in a controlled way.
+          </p>
+          <p>
+            JavaScript also allows for private class fields (denoted by a `#`
+            prefix) as introduced in ES2021, adding another layer of
+            encapsulation by restricting access to class properties and methods
+            outside the class body. This technique ensures a clear separation of
+            the internal and external functionality of an object, enhancing
+            modularity and protecting the internal state from being altered
+            unintentionally.
+          </p>
+        </section>
+
+        <section id="abstraction">
+          <h2>Abstraction</h2>
+          <p>
+            Abstraction simplifies complex systems by modeling classes based on
+            essential characteristics, hiding unnecessary details from the user.
+            In JavaScript, abstraction is achieved through objects and classes
+            that expose only necessary functionalities, letting developers
+            interact with a simpler, higher-level interface without worrying
+            about the underlying details.
+          </p>
+        </section>
+
+        <section id="closures">
+          <h2>Closures</h2>
+          <p>
+            Closures are functions that remember the environment in which they
+            were created, even after that environment has gone out of scope.
+            This feature allows JavaScript functions to have "private" variables
+            and enables encapsulation of data. Closures are especially useful in
+            scenarios like event handling, callbacks, and creating factory
+            functions.
+          </p>
+        </section>
+
+        <section id="async-js">
+          <h2>Asynchronous JavaScript</h2>
+          <p>
+            Asynchronous JavaScript allows code execution without blocking
+            subsequent code. Common asynchronous features in JavaScript include
+            callbacks, Promises, and `async/await`. These techniques are crucial
+            for operations that take time, like data fetching, animations, or
+            user input, making JavaScript responsive and efficient for web
+            applications.
+          </p>
+        </section>
+
+        <section id="prototypes">
+          <h2>Prototypes</h2>
+          <p>
+            Prototypes are fundamental to JavaScript's inheritance model. Every
+            object in JavaScript has a prototype from which it can inherit
+            properties and methods. The prototype chain allows for shared
+            functionality between objects, enabling JavaScript’s unique
+            prototypal inheritance model that differs from classical inheritance
+            in other languages.
+          </p>
+        </section>
+
+        <section id="modules">
+          <h2>Modules</h2>
+          <p>
+            Modules in JavaScript allow developers to split code into separate
+            files, each handling a specific functionality. This promotes
+            organization, reusability, and separation of concerns. JavaScript
+            modules are supported natively with ES6 `import` and `export`
+            syntax, making it easier to build scalable and maintainable
+            applications.
+          </p>
+        </section>
+      </div>
+    </div>
+
+    <script>
+      function toggleMenu() {
+        document.getElementById("menu").classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
